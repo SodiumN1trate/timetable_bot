@@ -1,10 +1,9 @@
 import discord
-import discord
-from discord.ext import commands
 import asyncio
 import datetime
 from datetime import datetime
-from main import lesson_start_time, alert_time, get_subjects
+from timetable_parser import alert_time, get_subjects
+from bot_token import TOKEN
 
 client = discord.Client()
 
@@ -90,4 +89,4 @@ async def on_ready():
 client.loop.create_task(timer())
 
 
-client.run('ODg5OTI1NjAwMDM3NDUzODg1.YUoVzQ.sWoQuKs6E2oTgum9Sh_gjf7m2MQ')
+client.run(TOKEN)
